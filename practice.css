@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/** @format */
+.btn-important {
+  font-size: 24px;
+  width: 200px;
+  background-color: beige;
+}
+
+h6 {
+  font-size: 100%;
+}
+
+h7 {
+  font-size: 110%;
+}
+
+h8 {
+  font-size: 120%;
+}
+
+h9 {
+  font-size: 130%;
+}
+
+h10 {
+  font-size: 140%;
+}
+
+.dayMonday {
+  color: rgb(140, 61, 214);
+}
+
+.dayTuesday {
+  color: rgb(76, 172, 31);
+}
+
+.dayWednesday {
+  color: rgb(51, 0, 255);
+}
+
+.dayThursday {
+  color: rgb(61, 90, 61);
+}
+
+.dayFriday {
+  color: rgb(165, 60, 79);
+}
+
+.daySaturday {
+  color: indigo;
+}
+
+.daySunday {
+  color: violet;
+}
+
+.font1 {
+  font-weight: 100;
+}
+
+.font2 {
+  font-weight: 200;
+}
+
+.font3 {
+  font-weight: 300;
+}
+
+.font4 {
+  font-weight: 400;
+}
+
+.font5 {
+  font-weight: 500;
+}
+
+.font6 {
+  font-weight: 600;
+}
+
+.font7 {
+  font-weight: 700;
+}
+
+.font8 {
+  font-weight: 800;
+}
+
+.font9 {
+  font-weight: 900;
+}
+
+.font10 {
+  font-weight: 1000;
+}
+
+.team_Kansas {
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  width: 200px;
+}
+
+.team_Miami {
+  color: blue;
+  background-color: white;
+  width: 200px;
+}
+
+.team_fever {
+  color: red;
+  background-color: blue;
+  width: 200px;
+}
+
+.team_Auburn {
+  color: red;
+  background-color: black;
+  width: 200px;
+}
+
+.season_autumn h1::after {
+  content: "🍂";
+}
+.season_autumn h2::after {
+  content: "🍂";
+}
+.season_autumn h3::after {
+  content: "🍂";
+}
+.season_autumn h4::after {
+  content: "🍂";
+}
+.season_autumn h5::after {
+  content: "🍂";
+}
+.season_autumn h6::after {
+  content: "🍂";
+}
+
+.season_spring h1::after {
+  content: "🌱";
+}
+.season_spring h2::after {
+  content: "🌱";
+}
+.season_spring h3::after {
+  content: "🌱";
+}
+.season_spring h4::after {
+  content: "🌱";
+}
+.season_spring h5::after {
+  content: "🌱";
+}
+.season_spring h6::after {
+  content: "🌱";
+}
+
+.season_summer h1::after {
+  content: "🍃";
+}
+.season_summer h2::after {
+  content: "🍃";
+}
+.season_summer h3::after {
+  content: "🍃";
+}
+.season_summer h4::after {
+  content: "🍃";
+}
+.season_summer h5::after {
+  content: "🍃";
+}
+.season_summer h6::after {
+  content: "🍃";
+}
+
+.season_winter h1::after {
+  content: "🧊";
+}
+.season_winter h2::after {
+  content: "🧊";
+}
+.season_winter h3::after {
+  content: "🧊";
+}
+.season_winter h4::after {
+  content: "🧊";
+}
+.season_winter h5::after {
+  content: "🧊";
+}
+.season_winter h6::after {
+  content: "🧊";
+}
+
+.exercise {
+  width: 300px;
+  height: 250px;
+  border: 5px black solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.tallExercise {
+  height: 400px;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=practice.css.map */

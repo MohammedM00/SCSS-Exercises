@@ -1,0 +1,146 @@
+/** @format */
+
+// Practice Exercises
+
+
+// 1) After reviewing the interpolation section, create a class, .btn, that uses a mixin and is intended to generate a button, with the font size, width, background colour and name passed in. The forground colour should be purple, and the class name should use interpolation to build up a combination of .btn-<name>.
+
+// For example, if the name is important, the class should have a title of btn-important.
+
+@mixin btn-($name) {
+    .btn-#{$name} {
+        font-size: 24px;
+        width: 200px;
+        background-color: beige;
+    }
+}
+
+@include btn-(important);
+
+
+
+// 2) After reviewing the List sections, create a mixin again(!).
+
+// Create a list of percentages, for font sizes ranging fro 100% to 140%.
+
+// Use the mixin to generate level headings (h6 through h10) with font sizes ranging from 100% to 140%, and use teh nth function to access the percentage based on the number passed to the mixin.
+
+$percentages: 100%, 110%, 120%, 130%, 140%;
+
+@mixin headingLevel($index) {
+    h#{$index} {
+        font-size: nth($percentages, $index - 5);
+    }
+}
+
+@include headingLevel(6);
+@include headingLevel(7);
+@include headingLevel(8);
+@include headingLevel(9);
+@include headingLevel(10);
+
+
+
+// 3) After reviewing the section referencing @each rule, create a list of days of the week, with theme information (maybe colours, you decide) - like this:
+
+// $days: "Monday" <additional information>, "Tuesday" .......
+
+// Create SCSS code that generates classes for div elements, that set the scene for each day of the week with some special effects.
+
+$days: "Monday" "red", "Tuesday" "orange", "Wednesday" "yellow", "Thursday" "green", "Friday" "blue", "Saturday" "indigo", "Sunday" "violet";
+
+@each $item in $days {
+    .day#{nth($item, 1)} {
+        color: unquote(nth($item, 2))
+    }
+}
+
+
+
+// 4) Review @for. Use the @for rule to generate a series of classes that represent font weights, ranging from smallest (.font1) to largest(.font10).
+
+$weights: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
+
+@for $index from 1 through length($weights) {
+    .font#{$index} {
+        font-weight: nth($weights, $index);
+    }
+}
+
+
+
+// 5) Review the maps, then create SCSS to generate a series of classes representing colours for the top 4 basketball teams in March Madness.
+
+// i dont really know college basketball so i went with Indy teams and colors
+
+$indyTeams: (
+    pacers: gold blue,
+    colts: blue white,
+    fever: red blue,
+    indians: red black,
+);
+
+@each $key, $value in $indyTeams {
+    .team_#{$key} {
+        color: nth($value, 1);
+        background-color: nth($value, 2);
+        width: 200px;
+    }
+}
+
+
+
+// 6) Create a season variable, a mixin and a rule that places a season glyph after heading tags, depending on the season? (challenge)
+
+// Reference the list using the @each rule
+
+$seasons: "autumn" "\1F342", "spring" "\1F331", "summer" "\1F343", "winter" "\1F9CA";
+
+@mixin seasonsTag() {
+    @each $item in $seasons {
+        .season_#{nth($item, 1)} {
+            h1::after {
+                content: nth($item, 2);
+            }
+            h2::after {
+                content: nth($item, 2);
+            }
+            h3::after {
+                content: nth($item, 2);
+            }
+            h4::after {
+                content: nth($item, 2);
+            }
+            h5::after {
+                content: nth($item, 2);
+            }
+            h6::after {
+                content: nth($item, 2);
+            }
+        }
+    }
+}
+
+@include seasonsTag();
+
+
+
+// general styling for the page
+
+.exercise {
+    width: 300px;
+    height: 250px;
+    border: 5px black solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+  
+.tallExercise {
+    height: 400px;
+}
+  
+body {
+    display: flex;
+    flex-wrap: wrap;;
+}
